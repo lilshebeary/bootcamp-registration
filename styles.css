@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #ff0a54;
+  }
+  .container {
+    margin-top: 5rem;
+    border: 1px solid black;
+    padding: 2rem;
+    width: 80%;
+  }
+  span {
+    font-size: 6.7rem;
+    transform: rotate(-90deg);
+
+  }
+
+  h1 {
+   
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    padding: 1rem;
+  }
+  .highlight{
+    margin-top: 1rem;
+    content: " ";
+    display: block;
+    height:10%;
+    width: 23%;
+    margin-left: -3px;
+    margin-right: -3px;
+    /* position: absolute; */
+    background: #ffd500;
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 20% 15% 20% 24%;
+    padding: 10px 3px 3px 10px;
+}
+.highlight2{
+    margin-top: 2rem;
+    content: " ";
+    display: block;
+    height:10%;
+    width: 23%;
+    margin-left: 3px;
+    margin-right: 3px;
+    /* position: absolute; */
+    background: #04a777;
+    transform: rotate(2deg);
+    top: -1px;
+    left: -1px;
+    border-radius: 10% 35% 10% 27%;
+    padding: 10px 3px 3px 10px;
+}
+.bootcamp {
+    margin-top: 2rem;
+}
+input{
+    border-radius: 4px;
+    font-size: 1.7rem;
+    margin: .5rem;
+}
+select {
+    background-color: #73d2de;
+    font-size: 1.5rem;
+    padding: .1em .2em;
+    border-radius: 4px;
+}
+
+.btn-container {
+    padding: 3rem 1rem 1rem 0.5rem;
+}
+button {
+    font-size: 1.5rem;
+    border-radius: 4px;
+    margin-right: .3rem;
+    padding: .1em .2em;
+}
+#registerStudentButton {
+    background-color: #7c238c;
+    margin-right: 1rem;
+}
+#listStudentsButton {
+    background-color: #ff69eb;
+}
+#StudentList {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 1rem;
+}
+li {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    font-size: 2rem;
+}
