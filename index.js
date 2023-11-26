@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const listStudentsButton = document.getElementById('listStudentsButton');
     const studentNameInput = document.getElementById('studentNameInput');
     const studentEmailInput = document.getElementById('studentEmailInput');
+<<<<<<< HEAD
     const bootcampLevelInput = document.getElementById('bootcampLevelInput');
     const studentListContainer = document.getElementById('StudentList');
 
@@ -84,6 +85,60 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+=======
+    const bootcampNameInput = document.getElementById('bootcampNameInput'); // Updated ID
+    const bootcampLevelInput = document.getElementById('bootcampLevelInput');
+    const studentListContainer = document.getElementById('StudentList');
+
+    let bootcamps = [];
+    let bootcamp;
+    // Function to create a bootcamp instance
+    function createBootcamp() {
+            // If bootcamp is not set, create a new one with the provided name
+           const newBootcamp = new Bootcamp(bootcampNameInput.value, bootcampLevelInput.value);
+           bootcamps.push(newBootcamp);
+           bootcamp = newBootcamp;
+    }
+
+    registerStudentButton.addEventListener('click', function () {
+
+        bootcamp = bootcamps.find(bootcamp => bootcamp.name === bootcampNameInput.value);
+        console.log(bootcamp);
+        console.log(bootcamps);
+
+        if(!bootcamp){
+            createBootcamp(); 
+        } 
+        const newStudent = new Student(studentNameInput.value, studentEmailInput.value, bootcampNameInput.value);
+        bootcamp.registerStudent(newStudent, bootcampLevelInput.value, bootcampNameInput.value);
+        studentNameInput.value = ''; // Clear input after registration
+        studentEmailInput.value = ''; // Clear input after registration
+        bootcampNameInput.value = '';
+      
+    });
+   
+    listStudentsButton.addEventListener('click', function () {
+        studentListContainer.innerHTML = ''; // Clear previous content
+        if (bootcamps.length) {
+            const list = document.createElement('ul');
+            for(const b of bootcamps){
+               for(const s of b.students){
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `${s.name} - ${b.name} (${s.level})`;
+                list.appendChild(listItem);
+               }
+            }
+            studentListContainer.appendChild(list);
+        } else {
+            console.log('No bootcamp selected.');
+        }   
+    });
+
+
+});
+ 
+
+>>>>>>> 4646a0a (fix js to display all students in bcs)
 
 
 
