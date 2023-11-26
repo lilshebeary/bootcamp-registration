@@ -8,24 +8,29 @@
     background-color: #ff0a54;
   }
   .container {
-    margin-top: 5rem;
+    margin-top: 3rem;
     border: 1px solid black;
     padding: 2rem;
     width: 80%;
+    border-radius: 2px;
   }
   span {
     font-size: 6.7rem;
     transform: rotate(-90deg);
-
   }
 
   h1 {
-   
     font-size: 5rem;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
     padding: 1rem;
+  }
+  .student-container {
+    border-bottom: .1px solid black;
+    padding: 1rem;
+    /* border-radius: 2px; */
+    margin: 2.5rem;
   }
   .highlight{
     margin-top: 1rem;
@@ -35,7 +40,6 @@
     width: 23%;
     margin-left: -3px;
     margin-right: -3px;
-    /* position: absolute; */
     background: #ffd500;
     transform: rotate(2deg);
     top: -1px;
@@ -51,7 +55,6 @@
     width: 23%;
     margin-left: 3px;
     margin-right: 3px;
-    /* position: absolute; */
     background: #04a777;
     transform: rotate(2deg);
     top: -1px;
@@ -107,11 +110,12 @@ button {
 }
 .students {
     padding: .3rem;
-    margin: 2rem 0 1rem;
+    margin: 2.2rem 0 1rem;
 }
 #StudentList {
     border: 1px solid black;
-    margin: 1rem;
+    /* margin: 1rem; */
+    border-radius: 2px;
     padding: 2rem 1rem;
 }
 li {
