@@ -49,43 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const listStudentsButton = document.getElementById('listStudentsButton');
     const studentNameInput = document.getElementById('studentNameInput');
     const studentEmailInput = document.getElementById('studentEmailInput');
-<<<<<<< HEAD
-    const bootcampLevelInput = document.getElementById('bootcampLevelInput');
-    const studentListContainer = document.getElementById('StudentList');
-
-    const bootcamp = new Bootcamp("React", "Advanced");
-
-    registerStudentButton.addEventListener('click', function () {
-        const newStudent = new Student(studentNameInput.value, studentEmailInput.value);
-        bootcamp.registerStudent(newStudent, bootcampLevelInput.value);
-        studentNameInput.value = ''; // Clear input after registration
-        studentEmailInput.value = ''; // Clear input after registration
-    });
-
-    listStudentsButton.addEventListener('click', function () {
-        const students = bootcamp.listStudents();
-        displayStudents(students);
-    });
-
-    function displayStudents(students) {
-        studentListContainer.innerHTML = ''; // Clear previous content
-        if (students.length === 0) {
-            studentListContainer.textContent = `No students are registered in this ${bootcamp.name} course.`;
-        } else {
-            const list = document.createElement('ul');
-            students.forEach(student => {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${student.name} - ${bootcamp.name} (${student.level})`;
-                // if (student.level === 'Easy') {
-                //     document.getElementById('#easy').style.color = '#04a777';
-                // }
-                list.appendChild(listItem);
-            });
-            studentListContainer.appendChild(list);
-        }
-    }
-});
-=======
     const bootcampNameInput = document.getElementById('bootcampNameInput'); // Updated ID
     const bootcampLevelInput = document.getElementById('bootcampLevelInput');
     const studentListContainer = document.getElementById('StudentList');
@@ -138,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
  
 
->>>>>>> 4646a0a (fix js to display all students in bcs)
 
 
 
